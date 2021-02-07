@@ -2,27 +2,26 @@ package searching;
 
 import java.util.Scanner;
 
-public class soal3 {
-    // method main()
+public class soal2 {
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        int arr[] = {21, 61, 28, 72, 44, 68, 37, 52, 75, 71,98};
+        int arr[] = {12102002, 12102004, 12102001, 12102003, 12102005, 12102008, 12102007, 12102006, 12102009, 121020013, 12102010, 12102012, 12102011};
 
-        // print array sebelum disorting
-        System.out.println("Bilangan sebelum disorting: ");
+        // print array yang belum di sorting
+        System.out.println("Data NIM sebelum disorting:");
         printArray(arr);
 
-        // print array sebelum disorting
-        System.out.println("\n\nBilangan sesudah disorting: ");
+        // Print array sesudah disorting
         bubbleSortAsc(arr);
-
         System.out.print("\nMasukkan angka yang akan dicari: ");
+
         int x = scanner.nextInt();
         // memanggil method search()
         search(arr, x);
     }
 
-    // searching menggunakan metode binary
+    // searching dengan metode binary
     public static int binary(int arr[], int x){
         int left = 0, right = arr.length -1;
         while(left <= right){
@@ -30,8 +29,8 @@ public class soal3 {
             if(arr[mid] == x){
                 return mid;
             }else if(arr[mid] < x){
-                left = mid + 1;
-            }else{
+                left = mid + 1;}
+            else{
                 right = mid - 1;
             }
         }
@@ -65,7 +64,6 @@ public class soal3 {
         printArray(array); // memanggil method printArray()
     }
 
-    // untuk mencetak array
     public static void printArray(int array[]){
         for (int i = 0; i < array.length; i++){
             System.out.println("Indeks ke-"+ i+ "   :"+ array[i]);
