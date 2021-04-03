@@ -1,5 +1,5 @@
 /*
-Soal: Buatlah deret bilangan prima (angka 1-100) !
+Soal: Buatlah deret bilangan prima dari angka 1 hingga 100 !
  */
 
 public class deret_bilangan_prima {
@@ -14,6 +14,7 @@ public class deret_bilangan_prima {
                     hasilBagi++;                // apabila hasil perhitungan terpenuhi maka melakukan kalkulasi
                 }
             }
+            
             if (hasilBagi == 2) {               // jika hasil perhitungan hanya ada 2 maka bisa dipastikan itu adalah bilangan prima
                 System.out.println("ini adalah bilangan prima : " + i);  // melakukan print output console
             }
